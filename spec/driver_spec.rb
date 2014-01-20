@@ -5,7 +5,7 @@ describe Selerki::Driver do
   context 'when no drivers present in the system' do
 
     before do
-      Selerki::Driver.cache.driver = nil
+      Selerki::Driver.session.driver = nil
     end
 
     it '.driver gives us webdriver' do

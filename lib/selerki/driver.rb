@@ -8,19 +8,19 @@ module Selerki
 
       # current driver for talking to the browser
       def driver
-        cache.driver
+        session.driver
       end
 
-      # private
-      def cache
-        Cache.instance
+      # session singleton
+      def session
+        Session.instance
       end
     end
 
     private
 
     # Private Cache were we store drivers once started.
-    class Cache
+    class Session
       include Singleton
       attr_accessor :driver
 
